@@ -55,34 +55,34 @@ jobs:
         rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
         
     - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a
+      run: cd openwrt && ./scripts/feeds install -a
       
     - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a
+      run: cd openwrt && ./scripts/feeds install -a
       
     - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a
+      run: cd openwrt && ./scripts/feeds install -a
       
     - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a  
+      run: cd openwrt && ./scripts/feeds install -a  
       
     - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a  
+      run: cd openwrt && ./scripts/feeds install -a  
       
     - name: Load custom feeds
       run: |
