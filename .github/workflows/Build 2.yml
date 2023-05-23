@@ -45,47 +45,51 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
+        sudo apt-get -y update
+        sudo apt-get -y upgrade
         sudo apt install -y ack antlr3 aria2 asciidoc autoconf automake autopoint binutils bison build-essential \
         bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \
         git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \
         libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \
         mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip libpython3-dev qemu-utils \
         rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
+        
+    - name: Update feeds
+      run: cd immortalwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd immortalwrt && ./scripts/feeds install -a
+      
+    - name: Update feeds
+      run: cd immortalwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd immortalwrt && ./scripts/feeds install -a
+      
+    - name: Update feeds
+      run: cd immortalwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd immortalwrt && ./scripts/feeds install -a
+      
+    - name: Update feeds
+      run: cd immortalwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd immortalwrt && ./scripts/feeds install -a  
+      
+    - name: Update feeds
+      run: cd immortalwrt && ./scripts/feeds update -a
+
+    - name: Install feeds
+      run: cd immortalwrt && ./scripts/feeds install -a  
+      
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF immortalwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd immortalwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
-    - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a
-      
-    - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a
-      
-    - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a
-      
-    - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a  
-      
-    - name: Update feeds
-      run: cd immortalwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd immortalwrt && ./scripts/feeds install -a  
+        $GITHUB_WORKSPACE/$DIY_P1_SH  
       
     - name: Load custom configuration
       run: |
@@ -94,6 +98,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd immortalwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
