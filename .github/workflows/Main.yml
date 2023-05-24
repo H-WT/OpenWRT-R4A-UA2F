@@ -19,6 +19,9 @@ on:
         required: false
         default: 'false'
 
+permissions:
+  contents: write
+
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt
   REPO_BRANCH: master
