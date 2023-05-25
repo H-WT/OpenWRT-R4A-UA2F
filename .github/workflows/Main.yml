@@ -85,25 +85,7 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
-      
-    - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
-      
-    - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a  
-      
-    - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a  
-      
+        
     - name: Import queue
       run: cd openwrt && svn checkout https://github.com/openwrt/packages/trunk/libs/libnetfilter-queue package/libs/libnetfilter-queue
     
