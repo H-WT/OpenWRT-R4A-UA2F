@@ -5,7 +5,7 @@
 ##### 用其他设备的话请改Main.config里的上面三行，改成自己所需要的 config
 ##### Main是immortalwrt，main是lede
 ##### 换源，Main.yml里的地址REPO_URL: https://github.com/coolsnowwolf/lede
-##### 如果编译过程中Load custom configuration提示找不到文件，把diy-part2.sh里的mt7621改成相应的内核目录
+##### 需要把diy-part2.sh里的mt7621改成相应的内核目录
 ##### aciton选择需要的编译
 ##### 目前云编译R4A，已测试成功
 
