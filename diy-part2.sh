@@ -17,6 +17,7 @@
 # CONFIG_NF_CONNTRACK=y
 # CONFIG_NF_CT_NETLINK=y
 
+# mt7621为处理器型号
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 target=$(grep "^CONFIG_TARGET" .config --max-count=1 | awk -F "=" '{print $1}' | awk -F "_" '{print $3}')
