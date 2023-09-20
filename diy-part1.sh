@@ -17,6 +17,7 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #git clone https://github.com/CHN-beta/rkp-ipid package/rkp-ipid
 git clone https://github.com/Zxilly/UA2F package/UA2F
+git clone https://github.com/lucikap/Brukamen package/Brukamen
 
 ## 非R4A从这里开始到最后都不要
 ### 修改为R4A千兆版Breed直刷版
