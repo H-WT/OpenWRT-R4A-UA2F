@@ -1,6 +1,3 @@
-iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
-iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53
-
 # 防时钟偏移检测
 iptables -t nat -N ntp_force_local
 iptables -t nat -I PREROUTING -p udp --dport 123 -j ntp_force_local
