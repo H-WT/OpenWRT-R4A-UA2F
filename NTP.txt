@@ -1,0 +1,4 @@
+ntp1.aliyun.com
+time1.cloud.tencent.com
+stdtime.gov.hk
+pool.ntp.org
